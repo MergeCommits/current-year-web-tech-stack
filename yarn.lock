@@ -188,6 +188,11 @@
   dependencies:
     tslib "^2.4.0"
 
+"@tsconfig/next@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@tsconfig/next/-/next-1.0.3.tgz#b7a53b24ff898ac79f5b3758fdf9b733f0bfe5b1"
+  integrity sha512-GbRRYrVMVHGwZLwCdaksOhAVPcYgUZGP3UhGnIxW54IpTynMY72bWWlUm1Jwh6BcJ66boYeQENpZ5CsEpltUnQ==
+
 "@types/json-schema@^7.0.9":
   version "7.0.11"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.11.tgz#d421b6c527a3037f7c84433fd2c4229e016863d3"
