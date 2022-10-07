@@ -30,6 +30,7 @@
         "@typescript-eslint/no-floating-promises": ["warn"],
         "@typescript-eslint/explicit-member-accessibility": ["warn"],
         "@typescript-eslint/no-inferrable-types": "warn",
+        "@typescript-eslint/consistent-type-imports": "error",
 
         // React
         "react/react-in-jsx-scope": "off", // React v17 doesn't require React import

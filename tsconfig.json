@@ -3,6 +3,7 @@
     "compilerOptions": {
         "strict": true,
         "noUncheckedIndexedAccess": true,
+        "importsNotUsedAsValues": "error",
         "baseUrl": "./src",
         "paths": {
             "@images/*": ["../public/images/*"]
