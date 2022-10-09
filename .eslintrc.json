@@ -3,14 +3,14 @@
     "parserOptions": {
         "project": "./tsconfig.json"
     },
-    "plugins": ["@typescript-eslint", "react"],
+    "plugins": ["@typescript-eslint", "react", "no-relative-import-paths"],
     "extends": [
         "eslint:recommended",
         "next/core-web-vitals",
         "plugin:@typescript-eslint/recommended",
         "plugin:react/recommended",
         "plugin:react-hooks/recommended",
-        "prettier"
+        "prettier" // Ensure this is last as it disables conflicting rules.
     ],
     "rules": {
         // Javascript.
@@ -32,8 +32,15 @@
         "@typescript-eslint/no-inferrable-types": "warn",
         "@typescript-eslint/consistent-type-imports": "error",
 
+        "no-relative-import-paths/no-relative-import-paths": [
+            "error",
+            {
+                "rootDir": "src"
+            }
+        ],
+
         // React
-        "react/react-in-jsx-scope": "off", // React v17 doesn't require React import
+        "react/react-in-jsx-scope": "off", // React >=v17 doesn't require React import
         "react/no-unsafe": "error",
         "react/no-redundant-should-component-update": "error",
         "react/jsx-fragments": "warn",
