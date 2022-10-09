@@ -3,7 +3,7 @@
 *99% of the comments written here are my own opinion. No clue what the other 1%
 is though...*
 
-Just the t3 stack with a better tsconfig and more opinionated linting/prettier
+Just a generated [create-t3-app](https://create.t3.gg/) stack with a better tsconfig and more opinionated linting/prettier
 options.
 
 # Technology
