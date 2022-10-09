@@ -39,5 +39,5 @@ I prefer using ~~PrimeReact~~ ~~Materialize~~ ~~Ant Design~~ ~~MUI~~ ~~I change 
 
 ## Other technologies
 
-- [GitHub Copilot](https://github.com/features/copilot) - It's not going to write everything for you, but it saves you from having to google how to use JavaScript's `map` function every time you want to use it.
+- [GitHub Copilot](https://github.com/features/copilot) - It's not going to write everything for you, but it saves you from having to google how to write that 3 line piece of code you need 3 times a month.
   - The real question is how much of this ReadMe was written by GitHub Copilot ;)
