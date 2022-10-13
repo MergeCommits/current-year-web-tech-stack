@@ -33,11 +33,7 @@ agree right?
   - As for why this matters, remember that types are erased at compile time and
     therefore don't need to be included in the final bundle. Using this fully erases type imports. ...so yeah it kinda doesn't matter but [it may matter in the future](https://stackoverflow.com/a/64243357/14880246).
 
-### No Tailwind CSS?
+## Other notable technologies
 
-I prefer using ~~PrimeReact~~ ~~Materialize~~ ~~Ant Design~~ ~~MUI~~ ~~I change my mind every five minutes just use whatever you want~~ [Chakra UI](https://chakra-ui.com) over Tailwind since it has a more ergonomic syntax for React usage. [Also these reasons](https://chakra-ui.com/getting-started/comparison#how-is-chakra-different-from-tailwind-css).
-
-## Other technologies
-
-- [GitHub Copilot](https://github.com/features/copilot) - It's not going to write everything for you, but it saves you from having to google how to write that 3 line piece of code you need 3 times a month.
+- [GitHub Copilot](https://github.com/features/copilot) - There's a bit of a learning curve to understanding how to get it to generate the code you want, but when it works it really works. 
   - The real question is how much of this ReadMe was written by GitHub Copilot ;)
