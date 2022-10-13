@@ -12,6 +12,7 @@ options.
 - [Next-Auth.js](https://next-auth.js.org)
 - [Prisma](https://prisma.io)
 - [TRPC](https://trpc.io)
+- [TailwindCSS](https://tailwindcss.com)
 - [Prettier](https://prettier.io)
 - [ESLint](https://eslint.org)
 
@@ -31,9 +32,9 @@ agree right?
   - An ESLint rule is also added to enforce this.
 - `importsNotUsedAsValues` is enforced in the tsconfig. It requires all [types to be imported using the `import type` syntax](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html#type-only-imports-and-export).
   - As for why this matters, remember that types are erased at compile time and
-    therefore don't need to be included in the final bundle. Using this fully erases type imports. ...so yeah it kinda doesn't matter but [it may matter in the future](https://stackoverflow.com/a/64243357/14880246).
+    therefore don't need to be included in the final bundle. Using this fully erases type imports. ...so yeah it kinda doesn't matter, but [it may matter in the future](https://stackoverflow.com/a/64243357/14880246).
 
 ## Other technologies
 
-- [GitHub Copilot](https://github.com/features/copilot) - It's not going to write everything for you, but it saves you from having to google how to use JavaScript's `map` function every time you want to use it.
+- [GitHub Copilot](https://github.com/features/copilot) - There's a bit of a learning curve to understanding how to get it to generate the code you want, but when it works it really works.
   - The real question is how much of this ReadMe was written by GitHub Copilot ;)
