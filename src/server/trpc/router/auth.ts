@@ -1,10 +1,10 @@
-import { authedProcedure, t } from "server/trpc/trpc";
+import { protectedProcedure, publicProcedure, router } from "server/trpc/trpc";
 
-export const authRouter = t.router({
-    getSession: t.procedure.query(({ ctx }) => {
+export const authRouter = router({
+    getSession: publicProcedure.query(({ ctx }) => {
         return ctx.session;
     }),
-    getSecretMessage: authedProcedure.query(() => {
+    getSecretMessage: protectedProcedure.query(() => {
         return "You are logged in and can see this secret message!";
     }),
 });

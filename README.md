@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Among_Us-ඞ-red)
 
-*99% of the comments written here are my own opinion. No clue what the other 1%
-is though...*
+_99% of the comments written here are my own opinion. No clue what the other 1%
+is though..._
 
 Just the t3 stack with a better tsconfig and more opinionated linting/prettier
 options.
@@ -32,10 +32,6 @@ agree right?
 - `importsNotUsedAsValues` is enforced in the tsconfig. It requires all [types to be imported using the `import type` syntax](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html#type-only-imports-and-export).
   - As for why this matters, remember that types are erased at compile time and
     therefore don't need to be included in the final bundle. Using this fully erases type imports. ...so yeah it kinda doesn't matter but [it may matter in the future](https://stackoverflow.com/a/64243357/14880246).
-
-### No Tailwind CSS?
-
-I prefer using ~~PrimeReact~~ ~~Materialize~~ ~~Ant Design~~ ~~MUI~~ ~~I change my mind every five minutes just use whatever you want~~ [Chakra UI](https://chakra-ui.com) over Tailwind since it has a more ergonomic syntax for React usage. [Also these reasons](https://chakra-ui.com/getting-started/comparison#how-is-chakra-different-from-tailwind-css).
 
 ## Other technologies
 
