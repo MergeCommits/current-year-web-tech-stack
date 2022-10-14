@@ -29,7 +29,9 @@ agree right?
 
 - Additional ESLint plugins for React.
 - The `baseURL` parameter is set to the src directory in the tsconfig. Removes the need to write `../../components` or `src/components` when importing files and simply write `components` instead.
-  - An ESLint rule is also added to enforce this.
+  - `eslint-plugin-no-relative-import-paths` was also added to enforce this.
+- Added `prettier-plugin-organize-imports` to sort imports.
+  - This normally conflicts with `prettier-plugin-tailwindcss`. The file `merged-prettier-plugin.cjs` resolves this.
 - `importsNotUsedAsValues` is enforced in the tsconfig. It requires all [types to be imported using the `import type` syntax](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html#type-only-imports-and-export).
   - As for why this matters, remember that types are erased at compile time and
     therefore don't need to be included in the final bundle. Using this fully erases type imports. ...so yeah it kinda doesn't matter, but [it may matter in the future](https://stackoverflow.com/a/64243357/14880246).
