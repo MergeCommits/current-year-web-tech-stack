@@ -20,7 +20,7 @@ options.
 
 - [Vercel - hosting](https://vercel.com)
 - [PlanetScale - MySQL database](https://planetscale.com)
-    - [Notes about using Prisma with PlanetScale](https://www.prisma.io/docs/guides/database/using-prisma-with-planetscale#differences-to-consider)
+  - [Notes about using Prisma with PlanetScale](https://www.prisma.io/docs/guides/database/using-prisma-with-planetscale#differences-to-consider)
 
 ## Differences to t3 stack
 
@@ -31,8 +31,7 @@ agree right?
 - The `baseURL` parameter is set to the src directory in the tsconfig. Removes the need to write `../../components` or `src/components` when importing files and simply write `components` instead. `eslint-plugin-no-relative-import-paths` was also added to enforce this.
 - Added `prettier-plugin-organize-imports` to sort imports. [This normally conflicts with `prettier-plugin-tailwindcss`](https://github.com/tailwindlabs/prettier-plugin-tailwindcss/issues/31#issuecomment-1024722576) so the file `merged-prettier-plugin.cjs` is there to solve that.
 - `importsNotUsedAsValues` is enforced in the tsconfig. It requires all [types to be imported using the `import type` syntax](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html#type-only-imports-and-export).
-  - As for why this matters, remember that types are erased at compile time and
-    therefore don't need to be included in the final bundle. Using this fully erases type imports. ...so yeah it kinda doesn't matter, but [it may matter in the future](https://stackoverflow.com/a/64243357/14880246).
+  - As for why this matters, remember that types are erased at compile time and therefore don't need to be included in the final bundle. Using this fully erases type imports. ...so yeah it kinda doesn't matter, but [it may matter in the future](https://stackoverflow.com/a/64243357/14880246).
 
 ## Other technologies
 
