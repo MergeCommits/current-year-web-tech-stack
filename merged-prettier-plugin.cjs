@@ -1,6 +1,7 @@
 const tailwind = require("prettier-plugin-tailwindcss");
 const organizeImports = require("prettier-plugin-organize-imports");
 
+/** @type {import("prettier").Plugin} */
 const combinedFormatter = {
     ...tailwind,
     parsers: {
