@@ -1,4 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const tailwind = require("prettier-plugin-tailwindcss");
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const organizeImports = require("prettier-plugin-organize-imports");
 
 /** @type {import("prettier").Plugin} */

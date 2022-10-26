@@ -1,5 +1,6 @@
 // @ts-check
-// noinspection ES6UnusedImports
+// organize-imports-ignore
+// eslint-disable-next-line no-relative-import-paths/no-relative-import-paths, @typescript-eslint/no-unused-vars
 import { env } from "./src/env/server.mjs";
 
 /**
