@@ -32,6 +32,7 @@ agree right?
 - Added `prettier-plugin-organize-imports` to sort imports. [This normally conflicts with `prettier-plugin-tailwindcss`](https://github.com/tailwindlabs/prettier-plugin-tailwindcss/issues/31#issuecomment-1024722576) so the file `merged-prettier-plugin.cjs` is there to solve that.
 - `importsNotUsedAsValues` is enforced in the tsconfig. It requires all [types to be imported using the `import type` syntax](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html#type-only-imports-and-export).
   - As for why this matters, remember that types are erased at compile time and therefore don't need to be included in the final bundle. Using this fully erases type imports. ...so yeah it kinda doesn't matter, but [it may matter in the future](https://stackoverflow.com/a/64243357/14880246).
+- Added [Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) to run ESLint and Prettier on staged files before committing.
 
 ## Other technologies
 
