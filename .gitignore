@@ -29,6 +29,9 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+# eslint
+.eslintcache
+
 # local env files
 .env
 .env*.local
@@ -38,6 +41,3 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-
-# Intellij
-.idea

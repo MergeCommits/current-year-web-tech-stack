@@ -1,6 +1,7 @@
 {
     "extends": "@tsconfig/next/tsconfig.json",
     "compilerOptions": {
+        "target": "es2017",
         "strict": true,
         "noUncheckedIndexedAccess": true,
         "importsNotUsedAsValues": "error",
