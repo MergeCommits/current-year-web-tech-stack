@@ -5,6 +5,7 @@
     "scripts": {
         "postinstall": "prisma generate && cp .gitignore .prettierignore",
         "db:push": "prisma db push",
+        "db:studio": "prisma studio",
         "build": "next build",
         "dev": "next dev",
         "lint": "next lint",
