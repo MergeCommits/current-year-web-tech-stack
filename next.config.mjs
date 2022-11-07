@@ -1,26 +1,18 @@
 // @ts-check
-// organize-imports-ignore
-// eslint-disable-next-line no-relative-import-paths/no-relative-import-paths, @typescript-eslint/no-unused-vars
-import { env } from "./src/env/server.mjs";
 
 /**
- * Don't be scared of the generics here.
- * All they do is to give us autocompletion when using this.
- *
- * @template {import('next').NextConfig} T
- * @param {T} config - A generic parameter that flows through to the return type
- * @constraint {{import('next').NextConfig}}
+ * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation.
+ * This is especially useful for Docker builds.
  */
-function defineNextConfig(config) {
-    return config;
-}
+!process.env.SKIP_ENV_VALIDATION && (await import("./src/env/server.mjs"));
 
-export default defineNextConfig({
+/** @type {import("next").NextConfig} */
+const config = {
     reactStrictMode: true,
     swcMinify: true,
-    // Next.js i18n docs: https://nextjs.org/docs/advanced-features/i18n-routing
     i18n: {
         locales: ["en"],
         defaultLocale: "en",
     },
-});
+};
+export default config;

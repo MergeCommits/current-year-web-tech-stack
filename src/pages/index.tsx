@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Head from "next/head";
+import Link from "next/link";
 import type { FC } from "react";
 import { trpc } from "utils/trpc";
 
@@ -93,9 +94,11 @@ const Home: NextPage = () => {
 export default Home;
 
 const AuthShowcase: FC = () => {
-    const { data: secretMessage } = trpc.auth.getSecretMessage.useQuery();
-
     const { data: sessionData } = useSession();
+    const { data: secretMessage } = trpc.auth.getSecretMessage.useQuery(
+        undefined, // no input
+        { enabled: sessionData?.user !== undefined }
+    );
 
     return (
         <div className={"flex flex-col items-center justify-center gap-2"}>
@@ -126,11 +129,11 @@ type TechnologyCardProps = {
     documentation: string;
 };
 
-const TechnologyCard = ({
+const TechnologyCard: FC<TechnologyCardProps> = ({
     name,
     description,
     documentation,
-}: TechnologyCardProps) => {
+}) => {
     return (
         <section
             className={
@@ -139,7 +142,7 @@ const TechnologyCard = ({
         >
             <h2 className={"text-lg text-gray-700"}>{name}</h2>
             <p className={"text-sm text-gray-600"}>{description}</p>
-            <a
+            <Link
                 className={
                     "m-auto mt-3 w-fit text-sm text-violet-500 underline decoration-dotted underline-offset-2"
                 }
@@ -148,7 +151,7 @@ const TechnologyCard = ({
                 rel={"noreferrer"}
             >
                 {"Documentation"}
-            </a>
+            </Link>
         </section>
     );
 };
