@@ -8,9 +8,9 @@
 // eslint-disable-next-line no-relative-import-paths/no-relative-import-paths
 import { env as clientEnv, formatErrors } from "./client.mjs";
 // eslint-disable-next-line no-relative-import-paths/no-relative-import-paths
-import { serverSchema } from "./schema.mjs";
+import { serverEnv, serverSchema } from "./schema.mjs";
 
-const _serverEnv = serverSchema.safeParse(process.env);
+const _serverEnv = serverSchema.safeParse(serverEnv);
 
 if (!_serverEnv.success) {
     // eslint-disable-next-line no-console
