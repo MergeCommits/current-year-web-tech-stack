@@ -18,6 +18,7 @@
 
         "eqeqeq": ["warn", "always"],
         "require-await": "warn",
+        "curly": "warn",
 
         "no-console": "warn",
         "no-debugger": "warn",
