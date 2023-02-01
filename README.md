@@ -29,7 +29,6 @@ agree right?
 
 - Additional ESLint plugins for React.
 - The `baseURL` parameter is set to the src directory in the tsconfig. Removes the need to write `../../components` or `src/components` when importing files and simply write `components` instead. `eslint-plugin-no-relative-import-paths` was also added to enforce this.
-- Added `prettier-plugin-organize-imports` to sort imports. [This normally conflicts with `prettier-plugin-tailwindcss`](https://github.com/tailwindlabs/prettier-plugin-tailwindcss/issues/31#issuecomment-1024722576) so the file `merged-prettier-plugin.cjs` is there to solve that.
 - `importsNotUsedAsValues` is enforced in the tsconfig. It requires all [types to be imported using the `import type` syntax](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html#type-only-imports-and-export).
   - As for why this matters, remember that types are erased at compile time and therefore don't need to be included in the final bundle. Using this fully erases type imports. ...so yeah it kinda doesn't matter, but [it may matter in the future](https://stackoverflow.com/a/64243357/14880246).
 - Added [Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) to run ESLint and Prettier on staged files before committing.
@@ -38,3 +37,8 @@ agree right?
 
 - [GitHub Copilot](https://github.com/features/copilot) - There's a bit of a learning curve to understanding how to get it to generate the code you want, but when it works it really works.
   - The real question is how much of this ReadMe was written by GitHub Copilot ;)
+
+## Over notes for myself here incase something breaks
+
+- `yarn db:push` is required to generate the initial SQLite file otherwise it will error out.
+- https://github.com/tailwindlabs/prettier-plugin-tailwindcss#compatibility-with-other-prettier-plugins - Look at this in the event that prettier stops working.
