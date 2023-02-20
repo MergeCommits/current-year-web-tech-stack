@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Head from "next/head";
 import Link from "next/link";
-import type { FC } from "react";
+import type { ReactFunction } from "types/ReactFunction";
 import { api } from "utils/api";
 
 const Home: NextPage = () => {
@@ -95,7 +95,7 @@ const Home: NextPage = () => {
 
 export default Home;
 
-const AuthShowcase: FC = () => {
+const AuthShowcase: ReactFunction = () => {
     const { data: sessionData } = useSession();
 
     const { data: secretMessage } = api.example.getSecretMessage.useQuery(

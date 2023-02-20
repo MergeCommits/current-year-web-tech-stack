@@ -5,7 +5,9 @@ import "styles/globals.css";
 import { api } from "utils/api";
 
 const MyApp: AppType<{ session: Session | null }> = ({
+    // eslint-disable-next-line react/prop-types
     Component,
+    // eslint-disable-next-line react/prop-types
     pageProps: { session, ...pageProps },
 }) => {
     return (
