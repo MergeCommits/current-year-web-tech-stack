@@ -45,6 +45,7 @@
         "react/no-unsafe": "error",
         "react/no-redundant-should-component-update": "error",
         "react/jsx-fragments": "warn",
-        "react/jsx-curly-brace-presence": ["warn", "always"]
+        "react/jsx-curly-brace-presence": ["warn", "always"],
+        "react/prop-types": "off"
     }
 }
