@@ -14,7 +14,7 @@ module.exports = {
     embeddedLanguageFormatting: "auto",
     overrides: [
         {
-            files: "*.md",
+            files: "*.{md,yml}",
             options: {
                 tabWidth: 2,
             },
