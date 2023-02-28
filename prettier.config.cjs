@@ -19,5 +19,11 @@ module.exports = {
                 tabWidth: 2,
             },
         },
+        {
+            files: ".env.*",
+            options: {
+                parser: "sh",
+            },
+        },
     ],
 };
