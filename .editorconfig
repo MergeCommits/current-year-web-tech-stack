@@ -10,10 +10,10 @@ indent_size = 4
 indent_style = space
 tab_width = 7
 max_line_length = 80
-insert_final_newline = false
+insert_final_newline = true
 
 # New line preferences
 end_of_line = lf
 
-[*.md]
+[{*.md,*.yml}]
 indent_size = 2
