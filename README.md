@@ -42,3 +42,4 @@ agree right?
 
 - `yarn db:push` is required to generate the initial SQLite file otherwise it will error out.
 - https://github.com/tailwindlabs/prettier-plugin-tailwindcss#compatibility-with-other-prettier-plugins - Look at this in the event that prettier stops working.
+- https://github.com/t3-oss/create-t3-app/pull/1263 - See this regarding implementing this repo into a monorepo.
