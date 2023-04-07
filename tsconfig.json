@@ -5,22 +5,13 @@
         "strict": true,
         "checkJs": true,
         "noUncheckedIndexedAccess": true,
-        "importsNotUsedAsValues": "error",
+        "isolatedModules": true,
+        // "verbatimModuleSyntax": true,
         "baseUrl": "./src",
         "paths": {
-            "@images/*": [
-                "../public/images/*"
-            ]
+            "@images/*": ["../public/images/*"]
         }
     },
-    "include": [
-        "next-env.d.ts",
-        "**/*.ts",
-        "**/*.tsx",
-        "**/*.cjs",
-        "**/*.mjs"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs"],
+    "exclude": ["node_modules"]
 }
