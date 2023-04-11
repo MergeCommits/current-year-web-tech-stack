@@ -4,7 +4,6 @@
         "target": "es2017",
         "strict": true,
         "checkJs": true,
-        "noUncheckedIndexedAccess": true,
         "isolatedModules": true,
         // "verbatimModuleSyntax": true,
         "baseUrl": "./src",
