@@ -8,7 +8,6 @@ export const env = createEnv({
      */
     server: {
         DATABASE_URL: z.string().url(),
-        NODE_ENV: z.enum(["development", "test", "production"]),
         NEXTAUTH_SECRET:
             process.env.NODE_ENV === "production"
                 ? z.string().min(1)
@@ -31,6 +30,10 @@ export const env = createEnv({
      */
     client: {
         // NEXT_PUBLIC_CLIENTVAR: z.string().min(1),
+    },
+
+    shared: {
+        NODE_ENV: z.enum(["development", "test", "production"]),
     },
 
     /**
