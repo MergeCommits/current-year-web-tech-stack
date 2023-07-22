@@ -1,5 +1,5 @@
-/** @type {import("prettier").Config} */
-module.exports = {
+/** @type {import('prettier').Config} */
+const config = {
     printWidth: 80,
     tabWidth: 4,
     useTabs: false,
@@ -26,4 +26,13 @@ module.exports = {
             },
         },
     ],
+    plugins: [
+        "prettier-plugin-organize-imports",
+        "prettier-plugin-pkg",
+        "prettier-plugin-prisma",
+        "prettier-plugin-sh",
+        "prettier-plugin-tailwindcss", // Tailwind must go last: https://github.com/tailwindlabs/prettier-plugin-tailwindcss#compatibility-with-other-prettier-plugins
+    ],
 };
+
+export default config;

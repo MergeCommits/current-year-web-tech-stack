@@ -28,7 +28,8 @@ Doesn't T3 look a lot cooler when it's written as "t3" with a lowercase t? You
 agree right?
 
 - Additional ESLint plugins for React.
-- The `baseURL` parameter is set to the src directory in the tsconfig. Removes the need to write `../../components` or `src/components` when importing files and simply write `components` instead. `eslint-plugin-no-relative-import-paths` was also added to enforce this.
+- Additional Prettier plugins for package.json, sorting imports, prisma and .env files.
+- The `baseURL` parameter is set to the src directory in the tsconfig. Removes the need to write `../../components` or `src/components` when importing files and simply write `components` instead.`eslint-plugin-no-relative-import-paths` was also added to enforce this.
 - [`verbatimModuleSyntax`](https://www.typescriptlang.org/tsconfig#verbatimModuleSyntax) is enabled in the tsconfig.
 - Added [Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) to run ESLint and Prettier on staged files before committing.
 
@@ -36,4 +37,4 @@ agree right?
 
 - `yarn db:push` is required to generate the initial SQLite file otherwise it will error out.
 - https://github.com/tailwindlabs/prettier-plugin-tailwindcss#compatibility-with-other-prettier-plugins - Look at this in the event that prettier stops working.
-- https://github.com/t3-oss/create-t3-app/pull/1263 - See this regarding implementing this repo into a monorepo.
+- Use [`tsconfig-paths-webpack-plugin`](https://www.npmjs.com/package/tsconfig-paths-webpack-plugin) to sync the `baseURL` parameter from the tsconfig to webpack if necessary.

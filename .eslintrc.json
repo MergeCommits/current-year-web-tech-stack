@@ -1,15 +1,16 @@
 {
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "project": "./tsconfig.json"
+        "project": true
     },
     "plugins": ["@typescript-eslint", "react", "no-relative-import-paths"],
     "extends": [
         "eslint:recommended",
-        "next/core-web-vitals",
-        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/strict-type-checked",
+        "plugin:@typescript-eslint/stylistic-type-checked",
         "plugin:react/recommended",
         "plugin:react-hooks/recommended",
+        "next/core-web-vitals", // Must be after all others but before prettier: https://nextjs.org/docs/pages/building-your-application/configuring/eslint#prettier
         "prettier" // Ensure this is last as it disables conflicting rules.
     ],
     "rules": {
@@ -39,6 +40,7 @@
                 "rootDir": "src"
             }
         ],
+        "@typescript-eslint/consistent-type-definitions": ["error", "type"],
 
         // React
         "react/react-in-jsx-scope": "off", // React >=v17 doesn't require React import

@@ -4,8 +4,7 @@
         "target": "es2017",
         "strict": true,
         "checkJs": true,
-        "isolatedModules": true,
-        // "verbatimModuleSyntax": true,
+        "verbatimModuleSyntax": true,
         "baseUrl": "./src",
         "paths": {
             "@images/*": ["../public/images/*"]

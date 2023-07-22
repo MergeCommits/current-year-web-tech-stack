@@ -93,7 +93,6 @@ export default function Home() {
 
 function AuthShowcase() {
     const { data: sessionData } = useSession();
-
     const { data: secretMessage } = api.example.getSecretMessage.useQuery(
         undefined, // no input
         { enabled: sessionData?.user !== undefined }
@@ -105,7 +104,7 @@ function AuthShowcase() {
                 {sessionData && (
                     <span>
                         {"Logged in as "}
-                        {sessionData.user?.name}
+                        {sessionData.user.name}
                     </span>
                 )}
                 {secretMessage && (
