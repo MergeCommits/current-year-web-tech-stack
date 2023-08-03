@@ -54,7 +54,7 @@
         "typescript": "^5.0.2"
     },
     "ct3aMetadata": {
-        "initVersion": "7.16.0"
+        "initVersion": "7.17.0"
     },
     "lint-staged": {
         "*.{mjs,cjs,ts,tsx}": "eslint --cache --fix",
