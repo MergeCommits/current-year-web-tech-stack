@@ -2,8 +2,16 @@
     "extends": "@tsconfig/next/tsconfig.json",
     "compilerOptions": {
         "target": "es2017",
-        "strict": true,
         "checkJs": true,
+
+        "allowUnreachableCode": false,
+        "exactOptionalPropertyTypes": false, // It's hard to use traditional React styles with this enabled.
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noUncheckedIndexedAccess": true,
+
         "verbatimModuleSyntax": true,
         "baseUrl": "./src",
         "paths": {
