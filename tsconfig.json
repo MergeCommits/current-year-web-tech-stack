@@ -5,7 +5,7 @@
         "checkJs": true,
 
         "allowUnreachableCode": false,
-        "exactOptionalPropertyTypes": false, // It's hard to use traditional React styles with this enabled.
+        "exactOptionalPropertyTypes": false, // Hard to use regular React coding styles with this.
         "noFallthroughCasesInSwitch": true,
         "noImplicitOverride": true,
         "noImplicitReturns": true,
