@@ -21,6 +21,8 @@ options.
 - [Vercel - hosting](https://vercel.com)
 - [PlanetScale - MySQL database](https://planetscale.com)
   - [Notes about using Prisma with PlanetScale](https://www.prisma.io/docs/guides/database/using-prisma-with-planetscale#differences-to-consider)
+- [Firebase - hosting, auth, document database](https://firebase.google.com)
+  - [How to integrate Next.js with Firebase](https://firebase.google.com/docs/hosting/frameworks/nextjs)
 
 ## Differences to t3 stack
 
@@ -29,6 +31,7 @@ agree right?
 
 - Additional ESLint plugins for React.
 - Additional Prettier plugins for package.json, sorting imports, prisma and .env files.
+- tsconfig has just about every strict flag enabled.
 - The `baseURL` parameter is set to the src directory in the tsconfig. Removes the need to write `../../components` or `src/components` when importing files and simply write `components` instead. `eslint-plugin-no-relative-import-paths` was also added to enforce this.
 - [`verbatimModuleSyntax`](https://www.typescriptlang.org/tsconfig#verbatimModuleSyntax) is enabled in the tsconfig.
 - Added [Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) to run ESLint and Prettier on staged files before committing.
