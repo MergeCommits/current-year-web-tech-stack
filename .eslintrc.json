@@ -14,7 +14,7 @@
         "prettier" // Ensure this is last as it disables conflicting rules.
     ],
     "rules": {
-        // Javascript.
+        // Javascript
         "prefer-const": "warn",
 
         "eqeqeq": ["warn", "always"],
@@ -28,7 +28,7 @@
 
         "prefer-arrow-callback": "error",
 
-        // Typescript.
+        // Typescript
         "@typescript-eslint/no-floating-promises": ["warn"],
         "@typescript-eslint/explicit-member-accessibility": ["warn"],
         "@typescript-eslint/no-inferrable-types": "warn",
