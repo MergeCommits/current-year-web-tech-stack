@@ -21,7 +21,7 @@ options.
 - [Vercel - hosting](https://vercel.com)
 - [PlanetScale - MySQL database](https://planetscale.com)
   - [Notes about using Prisma with PlanetScale](https://www.prisma.io/docs/guides/database/using-prisma-with-planetscale#differences-to-consider)
-- [Firebase - hosting, auth, document database](https://firebase.google.com)
+- [Firebase - hosting, document database](https://firebase.google.com)
   - [How to integrate Next.js with Firebase](https://firebase.google.com/docs/hosting/frameworks/nextjs)
 
 ## Differences to t3 stack
@@ -38,6 +38,6 @@ agree right?
 
 ## Other notes for myself here incase something breaks
 
-- `yarn db:push` is required to generate the initial SQLite file otherwise it will error out.
+- `pnpm db:push` is required to generate the initial SQLite file otherwise it will error out.
 - https://github.com/tailwindlabs/prettier-plugin-tailwindcss#compatibility-with-other-prettier-plugins - Look at this in the event that prettier stops working.
 - Use [`tsconfig-paths-webpack-plugin`](https://www.npmjs.com/package/tsconfig-paths-webpack-plugin) to sync the `baseURL` parameter from the tsconfig to webpack if necessary.
