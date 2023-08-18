@@ -3,6 +3,11 @@
     "parserOptions": {
         "project": true
     },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
     "plugins": ["react", "no-relative-import-paths", "@typescript-eslint"],
     "extends": [
         "eslint:recommended",
