@@ -3,6 +3,7 @@
     "compilerOptions": {
         "target": "es2017",
         "checkJs": true,
+        "verbatimModuleSyntax": true,
 
         "allowUnreachableCode": false,
         "exactOptionalPropertyTypes": false, // Hard to use regular React coding styles with this.
@@ -12,7 +13,6 @@
         "noPropertyAccessFromIndexSignature": true,
         "noUncheckedIndexedAccess": true,
 
-        "verbatimModuleSyntax": true,
         "baseUrl": "./src",
         "paths": {
             "@images/*": ["../public/images/*"]
