@@ -38,7 +38,7 @@ type CreateContextOptions = {
 const createInnerTRPCContext = ({ session }: CreateContextOptions) => {
     return {
         session: session,
-        prisma,
+        db: prisma,
     };
 };
 
