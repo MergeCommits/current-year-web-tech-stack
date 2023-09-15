@@ -54,9 +54,6 @@
         "tailwindcss": "^3.3.3",
         "typescript": "^5.2.2"
     },
-    "ct3aMetadata": {
-        "initVersion": "7.19.0"
-    },
     "lint-staged": {
         "*.{mjs,cjs,ts,tsx}": "eslint --cache --fix",
         "*.{mjs,cjs,ts,tsx,prisma,css,md,json,env.*}": "prettier --write"
