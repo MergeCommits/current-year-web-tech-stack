@@ -1,0 +1,9 @@
+corepack
+tailwindcss
+nextjs
+nextauth
+tanstack
+trpc
+superjson
+datasource
+cuid

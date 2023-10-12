@@ -6,5 +6,6 @@
         "*.css": "tailwindcss",
         ".env.*": "properties"
     },
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "cSpell.import": ["./cspell/config.json"]
 }

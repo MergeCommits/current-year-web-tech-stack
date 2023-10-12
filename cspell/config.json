@@ -1,0 +1,17 @@
+{
+    "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+    "dictionaries": ["technical"],
+    "dictionaryDefinitions": [
+        {
+            "addWords": true,
+            "name": "technical",
+            "path": "./technical.txt"
+        }
+    ],
+    "ignorePaths": [
+        "../.next",
+        "../node_modules",
+        "../pnpm-lock.yaml",
+        "../prisma/db.sqlite"
+    ]
+}
