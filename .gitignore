@@ -33,6 +33,9 @@ yarn-error.log*
 # eslint
 .eslintcache
 
+# cspell
+.cspellcache
+
 # local env files
 .env
 .env*.local
