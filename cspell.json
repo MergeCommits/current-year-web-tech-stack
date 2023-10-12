@@ -5,13 +5,14 @@
         {
             "addWords": true,
             "name": "technical",
-            "path": "./technical.txt"
+            "path": "./cspell/technical.txt"
         }
     ],
     "ignorePaths": [
-        "../.next",
-        "../node_modules",
-        "../pnpm-lock.yaml",
-        "../prisma/db.sqlite"
+        ".next",
+        "node_modules",
+        "pnpm-lock.yaml",
+        "prisma/db.sqlite",
+        ".vscode"
     ]
 }

@@ -11,7 +11,7 @@
         "lint": "next lint",
         "postinstall": "prisma generate",
         "prepare": "husky install",
-        "spell-check": "cspell '**' --config ./cspell/config.json",
+        "spell-check": "cspell '**'",
         "start": "next start"
     },
     "dependencies": {
@@ -58,7 +58,9 @@
     },
     "lint-staged": {
         "*.{mjs,cjs,ts,tsx}": "eslint --cache --fix",
-        "*.{mjs,cjs,ts,tsx,prisma,css,md,json,env.*}": "prettier --write",
-        "*.{mjs,cjs,ts,tsx,prisma,css,md}": "cspell --config ./cspell/config.json"
+        "*.{mjs,cjs,ts,tsx,prisma,css,md,json,env.*}": [
+            "prettier --write",
+            "cspell --cache"
+        ]
     }
 }
