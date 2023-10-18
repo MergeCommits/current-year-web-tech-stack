@@ -15,6 +15,7 @@ options.
 - [TailwindCSS](https://tailwindcss.com)
 - [Prettier](https://prettier.io)
 - [ESLint](https://eslint.org)
+- [CSpell](https://cspell.org)
 
 ## Host recommendations
 
@@ -34,7 +35,7 @@ agree right?
 - tsconfig has just about every strict flag enabled.
 - The `baseURL` parameter is set to the src directory in the tsconfig. Removes the need to write `../../components` or `src/components` when importing files and simply write `components` instead. `eslint-plugin-no-relative-import-paths` was also added to enforce this.
 - [`verbatimModuleSyntax`](https://www.typescriptlang.org/tsconfig#verbatimModuleSyntax) is enabled in the tsconfig.
-- Added [Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) to run ESLint and Prettier on staged files before committing.
+- Added [Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) to run ESLint, Prettier and CSpell on staged files before committing.
 
 ## Other notes for myself here incase something breaks
 
