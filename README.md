@@ -10,7 +10,7 @@ options.
 
 - [Next.js](https://nextjs.org/)
 - [Next-Auth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
+- [Drizzle](https://orm.drizzle.team)
 - [TRPC](https://trpc.io)
 - [TailwindCSS](https://tailwindcss.com)
 - [Prettier](https://prettier.io)
@@ -21,7 +21,6 @@ options.
 
 - [Vercel - hosting](https://vercel.com)
 - [PlanetScale - MySQL database](https://planetscale.com)
-  - [Notes about using Prisma with PlanetScale](https://www.prisma.io/docs/guides/database/using-prisma-with-planetscale#differences-to-consider)
 - [Firebase - hosting, document database](https://firebase.google.com)
   - [How to integrate Next.js with Firebase](https://firebase.google.com/docs/hosting/frameworks/nextjs)
 
@@ -31,7 +30,7 @@ Doesn't T3 look a lot cooler when it's written as "t3" with a lowercase t? You
 agree right?
 
 - Additional ESLint plugins for React.
-- Additional Prettier plugins for package.json, sorting imports, prisma and .env files.
+- Additional Prettier plugins for package.json, sorting imports and .env files.
 - tsconfig has just about every strict flag enabled.
 - The `baseURL` parameter is set to the src directory in the tsconfig. Removes the need to write `../../components` or `src/components` when importing files and simply write `components` instead. `eslint-plugin-no-relative-import-paths` was also added to enforce this.
 - [`verbatimModuleSyntax`](https://www.typescriptlang.org/tsconfig#verbatimModuleSyntax) is enabled in the tsconfig.
@@ -39,6 +38,6 @@ agree right?
 
 ## Other notes for myself here incase something breaks
 
-- `pnpm db:push` is required to generate the initial SQLite file otherwise it will error out.
+- `pnpm db:push` is required to initiate the database otherwise it will error out.
 - https://github.com/tailwindlabs/prettier-plugin-tailwindcss#compatibility-with-other-prettier-plugins - Look at this in the event that prettier stops working.
 - Use [`tsconfig-paths-webpack-plugin`](https://www.npmjs.com/package/tsconfig-paths-webpack-plugin) to sync the `baseURL` parameter from the tsconfig to webpack if necessary.
