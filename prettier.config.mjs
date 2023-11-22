@@ -29,7 +29,6 @@ const config = {
     plugins: [
         "prettier-plugin-organize-imports",
         "prettier-plugin-pkg",
-        "prettier-plugin-prisma",
         "prettier-plugin-sh",
         "prettier-plugin-tailwindcss", // Tailwind must go last: https://github.com/tailwindlabs/prettier-plugin-tailwindcss#compatibility-with-other-prettier-plugins
     ],

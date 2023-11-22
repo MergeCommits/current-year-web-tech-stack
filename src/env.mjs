@@ -7,7 +7,16 @@ export const env = createEnv({
      * isn't built with invalid env vars.
      */
     server: {
-        DATABASE_URL: z.string().url(),
+        DATABASE_URL: z
+            .string()
+            .url()
+            .refine(
+                (str) => !str.includes("YOUR_MYSQL_URL_HERE"),
+                "You forgot to change the default URL"
+            ),
+        NODE_ENV: z
+            .enum(["development", "test", "production"])
+            .default("development"),
         NEXTAUTH_SECRET:
             process.env.NODE_ENV === "production"
                 ? z.string()
@@ -19,6 +28,7 @@ export const env = createEnv({
             // VERCEL_URL doesn't include `https` so it cant be validated as a URL
             process.env.VERCEL ? z.string() : z.string().url()
         ),
+        // Add ` on ID and SECRET if you want to make sure they're not empty
         GITHUB_CLIENT_ID: z.string(),
         GITHUB_CLIENT_SECRET: z.string(),
     },
@@ -30,10 +40,6 @@ export const env = createEnv({
      */
     client: {
         // NEXT_PUBLIC_CLIENT_VAR: z.string(),
-    },
-
-    shared: {
-        NODE_ENV: z.enum(["development", "test", "production"]),
     },
 
     /**
@@ -49,10 +55,13 @@ export const env = createEnv({
         GITHUB_CLIENT_SECRET: process.env["GITHUB_CLIENT_SECRET"],
     },
     /**
-     * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation.
-     * This is especially useful for Docker builds.
+     * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially
+     * useful for Docker builds.
      */
     skipValidation: Boolean(process.env["SKIP_ENV_VALIDATION"]),
-
+    /**
+     * Makes it so that empty strings are treated as undefined.
+     * `SOME_VAR: z.string()` and `SOME_VAR=''` will throw an error.
+     */
     emptyStringAsUndefined: true,
 });
