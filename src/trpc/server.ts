@@ -8,10 +8,10 @@ import {
 import { callProcedure } from "@trpc/server";
 import { observable } from "@trpc/server/observable";
 import { type TRPCErrorResponse } from "@trpc/server/rpc";
-import { cookies } from "next/headers";
 import { cache } from "react";
 
-import { appRouter } from "server/api/root";
+import { headers } from "next/headers";
+import { appRouter, type AppRouter } from "server/api/root";
 import { createTRPCContext } from "server/api/trpc";
 import { transformer } from "trpc/shared";
 
@@ -20,15 +20,15 @@ import { transformer } from "trpc/shared";
  * handling a tRPC call from a React Server Component.
  */
 const createContext = cache(() => {
+    const heads = new Headers(headers());
+    heads.set("x-trpc-source", "rsc");
+
     return createTRPCContext({
-        headers: new Headers({
-            cookie: cookies().toString(),
-            "x-trpc-source": "rsc",
-        }),
+        headers: heads,
     });
 });
 
-export const api = createTRPCProxyClient<typeof appRouter>({
+export const api = createTRPCProxyClient<AppRouter>({
     transformer,
     links: [
         loggerLink({
