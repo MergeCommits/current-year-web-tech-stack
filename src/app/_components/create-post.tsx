@@ -28,15 +28,19 @@ export function CreatePost() {
                 type={"text"}
                 placeholder={"Title"}
                 value={name}
-                onChange={(e) => { setName(e.target.value); }}
+                onChange={(e) => {
+                    setName(e.target.value);
+                }}
                 className={"w-full rounded-full px-4 py-2 text-black"}
             />
             <button
                 type={"submit"}
-                className={"rounded-full bg-white/10 px-10 py-3 font-semibold transition hover:bg-white/20"}
-                disabled={createPost.isLoading}
+                className={
+                    "rounded-full bg-white/10 px-10 py-3 font-semibold transition hover:bg-white/20"
+                }
+                disabled={createPost.isPending}
             >
-                {createPost.isLoading ? "Submitting..." : "Submit"}
+                {createPost.isPending ? "Submitting..." : "Submit"}
             </button>
         </form>
     );

@@ -7,12 +7,11 @@
  * need to use are documented accordingly near the end.
  */
 
-import { initTRPC, TRPCError } from "@trpc/server";
+import type { getAuth } from "@clerk/nextjs/server";
+import { TRPCError, initTRPC } from "@trpc/server";
+import { db } from "server/db";
 import superjson from "superjson";
 import { ZodError } from "zod";
-
-import { getServerAuthSession } from "server/auth";
-import { db } from "server/db";
 
 /**
  * 1. CONTEXT
@@ -26,12 +25,12 @@ import { db } from "server/db";
  *
  * @see https://trpc.io/docs/server/context
  */
-export const createTRPCContext = async (opts: { headers: Headers }) => {
-    const session = await getServerAuthSession();
-
+export const createTRPCContext = async (opts: {
+    auth: ReturnType<typeof getAuth>;
+    // eslint-disable-next-line @typescript-eslint/require-await
+}) => {
     return {
         db,
-        session,
         ...opts,
     };
 };
@@ -58,6 +57,12 @@ const t = initTRPC.context<typeof createTRPCContext>().create({
         };
     },
 });
+
+/**
+ * Create a server-side caller
+ * @see https://trpc.io/docs/server/server-side-calls
+ */
+export const createCallerFactory = t.createCallerFactory;
 
 /**
  * 3. ROUTER & PROCEDURE (THE IMPORTANT BIT)
@@ -91,14 +96,13 @@ export const publicProcedure = t.procedure;
  * @see https://trpc.io/docs/procedures
  */
 export const protectedProcedure = t.procedure.use(({ ctx, next }) => {
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-    if (!ctx.session || !ctx.session.user) {
+    if (!ctx.auth.userId) {
         throw new TRPCError({ code: "UNAUTHORIZED" });
     }
     return next({
         ctx: {
-            // infers the `session` as non-nullable
-            session: { ...ctx.session, user: ctx.session.user },
+            // infers `userId` as non-nullable
+            auth: { ...ctx.auth, userId: ctx.auth.userId },
         },
     });
 });
