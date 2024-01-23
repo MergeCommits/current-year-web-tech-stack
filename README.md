@@ -41,3 +41,5 @@ agree right?
 - `pnpm db:push` is required to initiate the database otherwise it will error out.
 - https://github.com/tailwindlabs/prettier-plugin-tailwindcss#compatibility-with-other-prettier-plugins - Look at this in the event that prettier stops working.
 - Use [`tsconfig-paths-webpack-plugin`](https://www.npmjs.com/package/tsconfig-paths-webpack-plugin) to sync the `baseURL` parameter from the tsconfig to webpack if necessary.
+- Use [ShadCN](https://ui.shadcn.com/) for common UI components.
+  - Use https://ui.shadcn.com/docs/components/form for forms.
