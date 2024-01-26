@@ -5,7 +5,7 @@ Just a generated [create-t3-app](https://create.t3.gg) with a bunch of opionated
 # Technology
 
 - [Next.js](https://nextjs.org) - combining server/client code without a monorepo, uses app router
-- [Clerk](https://next-auth.js.org) - user auth management and components
+- [Clerk](https://clerk.com) - user auth management and components
 - [next-intl](https://next-intl-docs.vercel.app) - type-safe i18n
 - [Drizzle](https://orm.drizzle.team) - type-safe ORM right down to joined queries
 - [TRPC](https://trpc.io) - type-safe api endpoints
