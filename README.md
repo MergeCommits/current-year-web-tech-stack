@@ -1,42 +1,39 @@
 ![](https://img.shields.io/badge/Among_Us-ඞ-red)
 
-_99% of the comments written here are my own opinion. No clue what the other 1%
-is though..._
-
-Just a generated [create-t3-app](https://create.t3.gg/) with a better tsconfig and more opinionated linting/prettier
-options.
+Just a generated [create-t3-app](https://create.t3.gg) with a bunch of opionated addons to make a complete website stack.
 
 # Technology
 
-- [Next.js](https://nextjs.org/)
-- [Next-Auth.js](https://next-auth.js.org)
-- [Drizzle](https://orm.drizzle.team)
-- [TRPC](https://trpc.io)
-- [TailwindCSS](https://tailwindcss.com)
-- [Prettier](https://prettier.io)
-- [ESLint](https://eslint.org)
-- [CSpell](https://cspell.org)
+- [Next.js](https://nextjs.org) - combining server/client code without a monorepo, uses app router
+- [Clerk](https://next-auth.js.org) - user auth management and components
+- [next-intl](https://next-intl-docs.vercel.app) - type-safe i18n
+- [Drizzle](https://orm.drizzle.team) - type-safe ORM right down to joined queries
+- [TRPC](https://trpc.io) - type-safe api endpoints
+- [TailwindCSS](https://tailwindcss.com) - styling
+- [Vitest](https://vitest.dev) - unit/integration testing
+- [Prettier](https://prettier.io) - code formatter
+- [ESLint](https://eslint.org) - formatter/linter
+- [CSpell](https://cspell.org) - spell checker
+- [Husky](https://typicode.github.io/husky) and [lint-staged](https://github.com/okonet/lint-staged) - run ESLint, Prettier and CSpell on staged files before committing
 
-## Host recommendations
+## Other technologies I use but not commonly enough for me to add to this template
 
-- [Vercel - hosting](https://vercel.com)
-- [PlanetScale - MySQL database](https://planetscale.com)
-- [Firebase - hosting, document database](https://firebase.google.com)
-  - [How to integrate Next.js with Firebase](https://firebase.google.com/docs/hosting/frameworks/nextjs)
+- [Storybook](https://storybook.js.org) - React component zoo/testing grounds
 
-## Differences to t3 stack
+## Other notable improvements
 
-Doesn't T3 look a lot cooler when it's written as "t3" with a lowercase t? You
-agree right?
-
-- Additional ESLint plugins for React.
-- Additional Prettier plugins for package.json, sorting imports and .env files.
+- Additional ESLint plugins/settings for React and Tyepescriot.
+- Additional Prettier plugins for package.json, sorting imports, sorting tailwind and .env files.
 - tsconfig has just about every strict flag enabled.
 - The `baseURL` parameter is set to the src directory in the tsconfig. Removes the need to write `../../components` or `src/components` when importing files and simply write `components` instead. `eslint-plugin-no-relative-import-paths` was also added to enforce this.
 - [`verbatimModuleSyntax`](https://www.typescriptlang.org/tsconfig#verbatimModuleSyntax) is enabled in the tsconfig.
-- Added [Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://github.com/okonet/lint-staged) to run ESLint, Prettier and CSpell on staged files before committing.
 
-## Other notes for myself here incase something breaks
+# Hosting recommendations
+- [Vercel - hosting](https://vercel.com)
+- [PlanetScale - MySQL database](https://planetscale.com)
+- [Firebase - document database](https://firebase.google.com) (among several other things it can do)
+
+# Other notes for myself here incase something breaks
 
 - `pnpm db:push` is required to initiate the database otherwise it will error out.
 - https://github.com/tailwindlabs/prettier-plugin-tailwindcss#compatibility-with-other-prettier-plugins - Look at this in the event that prettier stops working.
