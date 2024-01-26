@@ -4,10 +4,12 @@ import Link from "next/link";
 import { SignedIn } from "@clerk/nextjs";
 import { CreatePost } from "app/_components/create-post";
 import { OurUserButton } from "app/_components/user-button";
+import { getTranslations } from "next-intl/server";
 import { api } from "trpc/server";
 
 export default async function Home() {
     noStore();
+    const t = await getTranslations("IndexPage");
     const hello = await api.post.hello({ text: "from tRPC" });
 
     return (
@@ -17,6 +19,7 @@ export default async function Home() {
             }
         >
             <div className={"absolute right-4 top-4"}>
+                {t("thisIsTranslated")}
                 <OurUserButton />
             </div>
 

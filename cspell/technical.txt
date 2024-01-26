@@ -2,6 +2,7 @@ autoincrement
 corepack
 cuid
 datasource
+inlang
 nextauth
 nextjs
 planetscale
