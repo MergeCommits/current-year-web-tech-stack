@@ -18,7 +18,7 @@ Just a generated [create-t3-app](https://create.t3.gg) with a bunch of opionated
 
 ## Other technologies I use but not commonly enough for me to add to this template
 
-- [Storybook](https://storybook.js.org) - React component zoo/testing grounds
+- [react-hook-form](https://react-hook-form.com) - form validation, compatible with zod
 
 ## Other notable improvements
 
