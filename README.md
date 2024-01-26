@@ -10,7 +10,6 @@ Just a generated [create-t3-app](https://create.t3.gg) with a bunch of opionated
 - [Drizzle](https://orm.drizzle.team) - type-safe ORM right down to joined queries
 - [TRPC](https://trpc.io) - type-safe api endpoints
 - [TailwindCSS](https://tailwindcss.com) - styling
-- [Vitest](https://vitest.dev) - unit/integration testing
 - [Prettier](https://prettier.io) - code formatter
 - [ESLint](https://eslint.org) - formatter/linter
 - [CSpell](https://cspell.org) - spell checker
@@ -18,6 +17,7 @@ Just a generated [create-t3-app](https://create.t3.gg) with a bunch of opionated
 
 ## Other technologies I use but not commonly enough for me to add to this template
 
+- [Vitest](https://vitest.dev) - unit/integration testing
 - [react-hook-form](https://react-hook-form.com) - form validation, compatible with zod
 
 ## Other notable improvements
