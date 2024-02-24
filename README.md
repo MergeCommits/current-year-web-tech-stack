@@ -26,7 +26,6 @@ Just a generated [create-t3-app](https://create.t3.gg) with a bunch of opinionat
 - Additional ESLint plugins/settings for React and Typescript.
 - Additional Prettier plugins for package.json, sorting imports, sorting tailwind and .env files.
 - tsconfig has just about every strict flag enabled.
-- The `baseURL` parameter is set to the src directory in the tsconfig. Removes the need to write `../../components` or `src/components` when importing files and simply write `components` instead. `eslint-plugin-no-relative-import-paths` was also added to enforce this.
 - [`verbatimModuleSyntax`](https://www.typescriptlang.org/tsconfig#verbatimModuleSyntax) is enabled in the tsconfig.
 
 # Hosting recommendations
