@@ -1,4 +1,4 @@
-import { calculateThreePlusFive } from "_pure/foo";
+import { calculateThreePlusFive } from "src/_pure/foo";
 import { describe, expect, it } from "vitest";
 
 describe("calculateThreePlusFive", () => {

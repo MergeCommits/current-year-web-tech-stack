@@ -2,10 +2,10 @@ import { unstable_noStore as noStore } from "next/cache";
 import Link from "next/link";
 
 import { SignedIn } from "@clerk/nextjs";
-import { CreatePost } from "app/_components/create-post";
-import { OurUserButton } from "app/_components/user-button";
 import { getTranslations } from "next-intl/server";
-import { api } from "trpc/server";
+import { CreatePost } from "src/app/_components/create-post";
+import { OurUserButton } from "src/app/_components/user-button";
+import { api } from "src/trpc/server";
 
 export default async function Home() {
     noStore();

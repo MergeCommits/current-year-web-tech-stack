@@ -13,9 +13,9 @@
         "noPropertyAccessFromIndexSignature": true,
         "noUncheckedIndexedAccess": true,
 
-        "baseUrl": "./src",
         "paths": {
-            "@images/*": ["../public/images/*"]
+            "src/*": ["./src/*"],
+            "@images/*": ["./public/images/*"]
         }
     },
     "include": [

@@ -9,7 +9,7 @@
 
 import type { getAuth } from "@clerk/nextjs/server";
 import { TRPCError, initTRPC } from "@trpc/server";
-import { db } from "server/db";
+import { db } from "src/server/db";
 import superjson from "superjson";
 import { ZodError } from "zod";
 

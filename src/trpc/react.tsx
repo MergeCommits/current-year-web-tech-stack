@@ -6,16 +6,27 @@ import { createTRPCReact } from "@trpc/react-query";
 import { useState } from "react";
 import SuperJSON from "superjson";
 
-import type { AppRouter } from "server/api/root";
+import type { AppRouter } from "src/server/api/root";
+
+const createQueryClient = () => new QueryClient();
+
+let clientQueryClientSingleton: QueryClient | undefined = undefined;
+const getQueryClient = () => {
+    if (typeof window === "undefined") {
+        // Server: always make a new query client
+        return createQueryClient();
+    }
+    // Browser: use singleton pattern to keep the same query client
+    return (clientQueryClientSingleton ??= createQueryClient());
+};
 
 export const api = createTRPCReact<AppRouter>();
 
 export function TRPCReactProvider(props: { children: React.ReactNode }) {
-    const [queryClient] = useState(() => new QueryClient());
+    const queryClient = getQueryClient();
 
     const [trpcClient] = useState(() =>
         api.createClient({
-            transformer: SuperJSON,
             links: [
                 loggerLink({
                     enabled: (op) =>
@@ -23,6 +34,7 @@ export function TRPCReactProvider(props: { children: React.ReactNode }) {
                         (op.direction === "down" && op.result instanceof Error),
                 }),
                 unstable_httpBatchStreamLink({
+                    transformer: SuperJSON,
                     url: getBaseUrl() + "/api/trpc",
                     headers() {
                         const headers = new Headers();
