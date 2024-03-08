@@ -4,9 +4,9 @@ import { env } from "src/env";
 
 export default {
     schema: "./src/server/db/schema.ts",
-    driver: "mysql2",
+    driver: "pg",
     dbCredentials: {
-        uri: env.DATABASE_URL,
+        connectionString: env.NEON_DATABASE_URL,
     },
     tablesFilter: ["current-year-web-template_*"],
 } satisfies Config;

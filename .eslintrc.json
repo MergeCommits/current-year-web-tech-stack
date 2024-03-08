@@ -8,7 +8,12 @@
             "version": "detect"
         }
     },
-    "plugins": ["react", "no-relative-import-paths", "@typescript-eslint"],
+    "plugins": [
+        "react",
+        "no-relative-import-paths",
+        "@typescript-eslint",
+        "drizzle"
+    ],
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
@@ -16,6 +21,7 @@
         "plugin:react-hooks/recommended",
         "plugin:@typescript-eslint/strict-type-checked",
         "plugin:@typescript-eslint/stylistic-type-checked",
+        "plugin:drizzle/all",
         "next/core-web-vitals", // Must be after all others but before prettier: https://nextjs.org/docs/pages/building-your-application/configuring/eslint#prettier
         "prettier" // Ensure this is last as it disables conflicting rules.
     ],

@@ -4,9 +4,8 @@ cuid
 datasource
 inlang
 jiti
-nextauth
+neondatabase
 nextjs
-planetscale
 signin
 signout
 superjson
