@@ -17,7 +17,7 @@ export const env = createEnv({
         NODE_ENV: z
             .enum(["development", "test", "production"])
             .default("development"),
-        CLERK_SECRET_KEY: z.string(),
+        CLERK_SECRET_KEY: z.string().refine((s) => s.startsWith("sk_")),
     },
 
     /**
@@ -26,7 +26,9 @@ export const env = createEnv({
      * `NEXT_PUBLIC_`.
      */
     client: {
-        NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: z.string(),
+        NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: z
+            .string()
+            .refine((s) => s.startsWith("pk_")),
     },
 
     /**
