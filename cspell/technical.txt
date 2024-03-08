@@ -3,6 +3,7 @@ corepack
 cuid
 datasource
 inlang
+jiti
 nextauth
 nextjs
 planetscale

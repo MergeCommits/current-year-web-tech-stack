@@ -1,10 +1,9 @@
-/**
- * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation.
- * This is especially useful for Docker builds.
- */
-await import("./src/env.js");
-
+import createJiti from "jiti";
 import createNextIntlPlugin from "next-intl/plugin";
+import { fileURLToPath } from "node:url";
+
+const jiti = createJiti(fileURLToPath(import.meta.url));
+jiti("./src/env");
 
 const withNextIntl = createNextIntlPlugin();
 
