@@ -28,12 +28,6 @@ Just a generated [create-t3-app](https://create.t3.gg) with a bunch of opinionat
 - tsconfig has just about every strict flag enabled.
 - [`verbatimModuleSyntax`](https://www.typescriptlang.org/tsconfig#verbatimModuleSyntax) is enabled in the tsconfig.
 
-# Hosting recommendations
-
-- [Vercel - hosting](https://vercel.com)
-- [PlanetScale - MySQL database](https://planetscale.com)
-- [Firebase - document database](https://firebase.google.com) (among several other things it can do)
-
 # Other notes for myself here incase something breaks
 
 - `pnpm db:push` is required to initiate the database otherwise it will error out.
