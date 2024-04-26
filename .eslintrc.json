@@ -37,18 +37,28 @@
         "prefer-arrow-callback": "error",
 
         // Typescript
-        "@typescript-eslint/no-floating-promises": ["warn"],
-        "@typescript-eslint/explicit-member-accessibility": ["warn"],
+        "@typescript-eslint/no-floating-promises": "warn",
+        "@typescript-eslint/explicit-member-accessibility": "warn",
         "@typescript-eslint/no-inferrable-types": "warn",
         "@typescript-eslint/consistent-type-imports": "error",
-        "no-relative-import-paths/no-relative-import-paths": ["error"],
         "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+        "no-relative-import-paths/no-relative-import-paths": ["error"],
 
         // React
         "react/no-unsafe": "error",
         "react/no-redundant-should-component-update": "error",
         "react/jsx-fragments": "warn",
         "react/jsx-curly-brace-presence": ["warn", "always"],
-        "react/prop-types": "off"
+        "react/prop-types": "off",
+
+        // Drizzle
+        "drizzle/enforce-delete-with-where": [
+            "error",
+            { "drizzleObjectName": ["db"] }
+        ],
+        "drizzle/enforce-update-with-where": [
+            "error",
+            { "drizzleObjectName": ["db"] }
+        ]
     }
 }

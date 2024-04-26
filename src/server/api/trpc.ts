@@ -91,7 +91,7 @@ export const publicProcedure = t.procedure;
  * Protected (authenticated) procedure
  *
  * If you want a query or mutation to ONLY be accessible to logged in users, use this. It verifies
- * the session is valid and guarantees `ctx.session.user` is not null.
+ * the session is valid and guarantees `ctx.auth.userId` is not null.
  *
  * @see https://trpc.io/docs/procedures
  */
@@ -99,6 +99,7 @@ export const protectedProcedure = t.procedure.use(({ ctx, next }) => {
     if (!ctx.auth.userId) {
         throw new TRPCError({ code: "UNAUTHORIZED" });
     }
+
     return next({
         ctx: {
             // infers `userId` as non-nullable
