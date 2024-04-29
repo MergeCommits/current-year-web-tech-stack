@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "type": "module",
     "private": true,
-    "packageManager": "pnpm@9.0.5",
+    "packageManager": "pnpm@9.0.6",
     "scripts": {
         "build": "next build",
         "db:push": "dotenv drizzle-kit push:pg",
@@ -36,10 +36,10 @@
     "devDependencies": {
         "@tsconfig/next": "^2.0.3",
         "@types/node": "^20.12.7",
-        "@types/react": "^18.3.0",
+        "@types/react": "^18.3.1",
         "@types/react-dom": "^18.3.0",
-        "@typescript-eslint/eslint-plugin": "^7.7.1",
-        "@typescript-eslint/parser": "^7.7.1",
+        "@typescript-eslint/eslint-plugin": "^7.8.0",
+        "@typescript-eslint/parser": "^7.8.0",
         "autoprefixer": "^10.4.19",
         "cspell": "^8.7.0",
         "dotenv-cli": "^7.4.1",
